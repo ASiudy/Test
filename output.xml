@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170406 21:22:49.012" generator="Robot 3.0.2 (Python 2.7.13 on darwin)">
+<suite id="s1" name="GetReferd">
+<suite source="/Users/adamsiudy/development/robot-scripts/demo/Tests/GetReferd.robot" id="s1-s1" name="GetReferd">
+<test id="s1-s1-t1" name="Creating_Practice_and_adding_a_doctor">
+<kw name="Begin Web test">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${signup_page}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${remote_url}</arg>
+<arg>desired_capabilities=${desired_capabilities}</arg>
+</arguments>
+<msg timestamp="20170406 21:22:49.169" level="INFO">Opening browser 'chrome' to base url 'https://gr-qa.arabel.la/practice/sign-up/account' through remote server at 'http://AdamArabella:0a636cd2-ef5c-441d-a277-3b51c44a229a@ondemand.saucelabs.com:80/wd/hub'</msg>
+<status status="PASS" endtime="20170406 21:22:57.967" starttime="20170406 21:22:49.168"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${begin_web_text}</arg>
+</arguments>
+<status status="PASS" endtime="20170406 21:22:58.423" starttime="20170406 21:22:57.967"></status>
+</kw>
+<status status="PASS" endtime="20170406 21:22:58.424" starttime="20170406 21:22:49.168"></status>
+</kw>
+<kw name="Filling sign-up account page">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupform-practice-name</arg>
+<arg>${practice_name}</arg>
+</arguments>
+<msg timestamp="20170406 21:22:58.426" level="INFO">Typing text 'AutoTest182' into text field 'id=practicesignupform-practice-name'</msg>
+<status status="PASS" endtime="20170406 21:23:00.060" starttime="20170406 21:22:58.426"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupform-practice-admin-first-name</arg>
+<arg>${practice_first_name}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:00.061" level="INFO">Typing text 'Auto' into text field 'id=practicesignupform-practice-admin-first-name'</msg>
+<status status="PASS" endtime="20170406 21:23:01.645" starttime="20170406 21:23:00.060"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupform-practice-admin-last-name</arg>
+<arg>${practice_last_name}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:01.646" level="INFO">Typing text 'Test' into text field 'id=practicesignupform-practice-admin-last-name'</msg>
+<status status="PASS" endtime="20170406 21:23:03.231" starttime="20170406 21:23:01.645"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupform-email</arg>
+<arg>${office_admin_mail}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:03.231" level="INFO">Typing text 'automation+gro182@ydtech.co' into text field 'id=practicesignupform-email'</msg>
+<status status="PASS" endtime="20170406 21:23:05.318" starttime="20170406 21:23:03.231"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupform-password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:05.319" level="INFO">Typing password into text field 'id=practicesignupform-password'</msg>
+<status status="PASS" endtime="20170406 21:23:07.007" starttime="20170406 21:23:05.319"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupform-confirm_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:07.008" level="INFO">Typing password into text field 'id=practicesignupform-confirm_password'</msg>
+<status status="PASS" endtime="20170406 21:23:08.706" starttime="20170406 21:23:07.008"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${account_page_signup_button}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:08.708" level="INFO">Clicking button 'sign up'.</msg>
+<status status="PASS" endtime="20170406 21:23:10.761" starttime="20170406 21:23:08.707"></status>
+</kw>
+<status status="PASS" endtime="20170406 21:23:10.762" starttime="20170406 21:22:58.425"></status>
+</kw>
+<kw name="Filling sign-up billing page">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>BILLING ADDRESS AND CARD INFO</arg>
+</arguments>
+<status status="PASS" endtime="20170406 21:23:11.834" starttime="20170406 21:23:10.763"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupbillingform-billing_first_name</arg>
+<arg>${billing_first_name}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:11.834" level="INFO">Typing text 'AutoFirstName' into text field 'id=practicesignupbillingform-billing_first_name'</msg>
+<status status="PASS" endtime="20170406 21:23:13.437" starttime="20170406 21:23:11.834"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupbillingform-billing_last_name</arg>
+<arg>${billing_last_name}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:13.437" level="INFO">Typing text 'AutoLastName' into text field 'id=practicesignupbillingform-billing_last_name'</msg>
+<status status="PASS" endtime="20170406 21:23:15.123" starttime="20170406 21:23:13.437"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupbillingform-billing_address1</arg>
+<arg>${billing_address1}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:15.124" level="INFO">Typing text 'New York' into text field 'id=practicesignupbillingform-billing_address1'</msg>
+<status status="PASS" endtime="20170406 21:23:16.690" starttime="20170406 21:23:15.123"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupbillingform-billing_address2</arg>
+<arg>${billing_address2}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:16.692" level="INFO">Typing text '292 Brooklyn Ave' into text field 'id=practicesignupbillingform-billing_address2'</msg>
+<status status="PASS" endtime="20170406 21:23:18.414" starttime="20170406 21:23:16.691"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupbillingform-billing_city</arg>
+<arg>${billing_city}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:18.415" level="INFO">Typing text 'New York' into text field 'id=practicesignupbillingform-billing_city'</msg>
+<status status="PASS" endtime="20170406 21:23:19.992" starttime="20170406 21:23:18.414"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=#practicesignupbillingform-billing_state &gt; a</arg>
+</arguments>
+<msg timestamp="20170406 21:23:19.993" level="INFO">Clicking element 'css=#practicesignupbillingform-billing_state &gt; a'.</msg>
+<status status="PASS" endtime="20170406 21:23:21.077" starttime="20170406 21:23:19.993"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=#ui-select-choices-row-0-37 &gt; div</arg>
+</arguments>
+<msg timestamp="20170406 21:23:21.078" level="INFO">Clicking element 'css=#ui-select-choices-row-0-37 &gt; div'.</msg>
+<status status="PASS" endtime="20170406 21:23:22.093" starttime="20170406 21:23:21.077"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupbillingform-billing_zipcode</arg>
+<arg>${billing_zipcode}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:22.095" level="INFO">Typing text '11213' into text field 'id=practicesignupbillingform-billing_zipcode'</msg>
+<status status="PASS" endtime="20170406 21:23:23.612" starttime="20170406 21:23:22.094"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupbillingform-stripe_card</arg>
+<arg>${billing_cardno}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:23.613" level="INFO">Typing text '4012 8888 8888 1881' into text field 'id=practicesignupbillingform-stripe_card'</msg>
+<status status="PASS" endtime="20170406 21:23:25.277" starttime="20170406 21:23:23.612"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20170406 21:23:26.279" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170406 21:23:26.279" starttime="20170406 21:23:25.277"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupbillingform-stripe_cvc</arg>
+<arg>${billing_cardcvc}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:26.280" level="INFO">Typing text '111' into text field 'id=practicesignupbillingform-stripe_cvc'</msg>
+<status status="PASS" endtime="20170406 21:23:27.835" starttime="20170406 21:23:26.279"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=#practicesignupbillingform-stripe_month &gt; a</arg>
+</arguments>
+<msg timestamp="20170406 21:23:27.836" level="INFO">Clicking element 'css=#practicesignupbillingform-stripe_month &gt; a'.</msg>
+<status status="PASS" endtime="20170406 21:23:29.097" starttime="20170406 21:23:27.836"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=#ui-select-choices-row-1-4 &gt; div</arg>
+</arguments>
+<msg timestamp="20170406 21:23:29.097" level="INFO">Clicking element 'css=#ui-select-choices-row-1-4 &gt; div'.</msg>
+<status status="PASS" endtime="20170406 21:23:30.149" starttime="20170406 21:23:29.097"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=#practicesignupbillingform-stripe_year &gt; a</arg>
+</arguments>
+<msg timestamp="20170406 21:23:30.150" level="INFO">Clicking element 'css=#practicesignupbillingform-stripe_year &gt; a'.</msg>
+<status status="PASS" endtime="20170406 21:23:31.171" starttime="20170406 21:23:30.150"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=#ui-select-choices-row-2-1 &gt; div</arg>
+</arguments>
+<msg timestamp="20170406 21:23:31.172" level="INFO">Clicking element 'css=#ui-select-choices-row-2-1 &gt; div'.</msg>
+<status status="PASS" endtime="20170406 21:23:32.168" starttime="20170406 21:23:31.172"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div.form-bottom_bar &gt; div &gt; button</arg>
+</arguments>
+<msg timestamp="20170406 21:23:32.168" level="INFO">Clicking button 'css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div.form-bottom_bar &gt; div &gt; button'.</msg>
+<status status="PASS" endtime="20170406 21:23:34.501" starttime="20170406 21:23:32.168"></status>
+</kw>
+<status status="PASS" endtime="20170406 21:23:34.502" starttime="20170406 21:23:10.762"></status>
+</kw>
+<kw name="Filling sign-up-details page">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Great your account is created.</arg>
+</arguments>
+<status status="PASS" endtime="20170406 21:23:36.240" starttime="20170406 21:23:34.504"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div.form-section.form-section--billing &gt; div.page-billing-form &gt; div &gt; div:nth-child(4) &gt; div &gt; label</arg>
+</arguments>
+<msg timestamp="20170406 21:23:36.242" level="INFO">Clicking element 'css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div.form-section.form-section--billing &gt; div.page-billing-form &gt; div &gt; div:nth-child(4) &gt; div &gt; label'.</msg>
+<status status="PASS" endtime="20170406 21:23:37.386" starttime="20170406 21:23:36.241"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupdetailsform-email</arg>
+<arg>${office_admin_mail}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:37.387" level="INFO">Typing text 'automation+gro182@ydtech.co' into text field 'id=practicesignupdetailsform-email'</msg>
+<status status="PASS" endtime="20170406 21:23:39.108" starttime="20170406 21:23:37.387"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practicesignupdetailsform-phone</arg>
+<arg>${details_phone}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:39.109" level="INFO">Typing text '(646)-350-0442' into text field 'id=practicesignupdetailsform-phone'</msg>
+<status status="PASS" endtime="20170406 21:23:40.703" starttime="20170406 21:23:39.108"></status>
+</kw>
+<status status="PASS" endtime="20170406 21:23:40.703" starttime="20170406 21:23:34.502"></status>
+</kw>
+<kw name="Sign-up details page add Practice admin">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div.form-section.form-section--billing &gt; div.page-billing-form &gt; div &gt; div:nth-child(4) &gt; div &gt; a</arg>
+</arguments>
+<msg timestamp="20170406 21:23:40.704" level="INFO">Clicking element 'css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div.form-section.form-section--billing &gt; div.page-billing-form &gt; div &gt; div:nth-child(4) &gt; div &gt; a'.</msg>
+<status status="PASS" endtime="20170406 21:23:41.891" starttime="20170406 21:23:40.704"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practiceAdminsForm-first_name</arg>
+<arg>${practice_first_name}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:41.892" level="INFO">Typing text 'Auto' into text field 'id=practiceAdminsForm-first_name'</msg>
+<status status="PASS" endtime="20170406 21:23:43.466" starttime="20170406 21:23:41.891"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practiceAdminsForm-last_name</arg>
+<arg>${practice_last_name}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:43.467" level="INFO">Typing text 'Test' into text field 'id=practiceAdminsForm-last_name'</msg>
+<status status="PASS" endtime="20170406 21:23:45.017" starttime="20170406 21:23:43.466"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=practiceAdminsForm-email</arg>
+<arg>${account_admin_gra}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:45.019" level="INFO">Typing text 'automation+gra182@ydtech.co' into text field 'id=practiceAdminsForm-email'</msg>
+<status status="PASS" endtime="20170406 21:23:46.786" starttime="20170406 21:23:45.018"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div.form-section.form-section--billing &gt; div.page-billing-form &gt; div &gt; div:nth-child(4) &gt; div &gt; practice-admins-form &gt; ng-form &gt; div &gt; a:nth-child(2)</arg>
+</arguments>
+<msg timestamp="20170406 21:23:46.786" level="INFO">Clicking element 'css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div.form-section.form-section--billing &gt; div.page-billing-form &gt; div &gt; div:nth-child(4) &gt; div &gt; practice-admins-form &gt; ng-form &gt; div &gt; a:nth-child(2)'.</msg>
+<status status="PASS" endtime="20170406 21:23:47.819" starttime="20170406 21:23:46.786"></status>
+</kw>
+<status status="PASS" endtime="20170406 21:23:47.819" starttime="20170406 21:23:40.703"></status>
+</kw>
+<kw name="Go next page">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>EMAIL NOTIFICATIONS</arg>
+</arguments>
+<status status="PASS" endtime="20170406 21:23:48.257" starttime="20170406 21:23:47.821"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>next</arg>
+</arguments>
+<msg timestamp="20170406 21:23:48.257" level="INFO">Clicking button 'next'.</msg>
+<status status="PASS" endtime="20170406 21:23:50.187" starttime="20170406 21:23:48.257"></status>
+</kw>
+<status status="PASS" endtime="20170406 21:23:50.188" starttime="20170406 21:23:47.820"></status>
+</kw>
+<kw name="Add a doctor">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Add a doctor.</arg>
+</arguments>
+<status status="PASS" endtime="20170406 21:23:50.705" starttime="20170406 21:23:50.188"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div &gt; div:nth-child(2) &gt; div &gt; div.tab-pane.active &gt; div.container &gt; div.avatar_and_form &gt; div.avatar_and_form-form &gt; ul &gt; li:nth-child(1) &gt; div &gt; div:nth-child(1) &gt; input</arg>
+<arg>${doctor_first_name}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:50.706" level="INFO">Typing text 'AutomationDocctorekFirst' into text field 'css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div &gt; div:nth-child(2) &gt; div &gt; div.tab-pane.active &gt; div.container &gt; div.avatar_and_form &gt; div.avatar_and_form-form &gt; ul &gt; li:nth-child(1) &gt; div &gt; div:nth-child(1) &gt; input'</msg>
+<status status="PASS" endtime="20170406 21:23:52.438" starttime="20170406 21:23:50.705"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div &gt; div:nth-child(2) &gt; div &gt; div.tab-pane.active &gt; div.container &gt; div.avatar_and_form &gt; div.avatar_and_form-form &gt; ul &gt; li:nth-child(1) &gt; div &gt; div:nth-child(2) &gt; input</arg>
+<arg>${doctor_last_name}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:52.439" level="INFO">Typing text 'AutomationDoctorekLast' into text field 'css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div &gt; div:nth-child(2) &gt; div &gt; div.tab-pane.active &gt; div.container &gt; div.avatar_and_form &gt; div.avatar_and_form-form &gt; ul &gt; li:nth-child(1) &gt; div &gt; div:nth-child(2) &gt; input'</msg>
+<status status="PASS" endtime="20170406 21:23:54.105" starttime="20170406 21:23:52.438"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=*//li/input</arg>
+</arguments>
+<msg timestamp="20170406 21:23:54.106" level="INFO">Clicking element 'xpath=*//li/input'.</msg>
+<status status="PASS" endtime="20170406 21:23:55.146" starttime="20170406 21:23:54.106"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=html/body/div[2]/ul/li/input</arg>
+<arg>${medical_spec}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:55.147" level="INFO">Typing text 'Psychiatry' into text field 'xpath=html/body/div[2]/ul/li/input'</msg>
+<status status="PASS" endtime="20170406 21:23:56.669" starttime="20170406 21:23:55.147"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Psychiatry</arg>
+</arguments>
+<status status="PASS" endtime="20170406 21:23:57.141" starttime="20170406 21:23:56.669"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.select2-result-label.ui-select-choices-row-inner</arg>
+</arguments>
+<msg timestamp="20170406 21:23:57.142" level="INFO">Clicking element 'css=div.select2-result-label.ui-select-choices-row-inner'.</msg>
+<status status="PASS" endtime="20170406 21:23:58.171" starttime="20170406 21:23:57.141"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div &gt; div:nth-child(2) &gt; div &gt; div.tab-pane.active &gt; div.container &gt; div:nth-child(12) &gt; div.span_3.col &gt; input</arg>
+<arg>(646)-350-0442</arg>
+</arguments>
+<msg timestamp="20170406 21:23:58.172" level="INFO">Typing text '(646)-350-0442' into text field 'css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div &gt; div:nth-child(2) &gt; div &gt; div.tab-pane.active &gt; div.container &gt; div:nth-child(12) &gt; div.span_3.col &gt; input'</msg>
+<status status="PASS" endtime="20170406 21:23:59.815" starttime="20170406 21:23:58.171"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div &gt; div:nth-child(2) &gt; div &gt; div.tab-pane.active &gt; div.container &gt; div:nth-child(12) &gt; div.span_6.col &gt; input</arg>
+<arg>${doctor_mail}</arg>
+</arguments>
+<msg timestamp="20170406 21:23:59.816" level="INFO">Typing text 'automation+grd182@ydtech.co' into text field 'css=body &gt; ui-view &gt; div &gt; ui-view:nth-child(2) &gt; form &gt; div &gt; div:nth-child(2) &gt; div &gt; div.tab-pane.active &gt; div.container &gt; div:nth-child(12) &gt; div.span_6.col &gt; input'</msg>
+<status status="PASS" endtime="20170406 21:24:01.617" starttime="20170406 21:23:59.815"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=(//input[@type='search'])[2]</arg>
+</arguments>
+<msg timestamp="20170406 21:24:01.618" level="INFO">Clicking element 'xpath=(//input[@type='search'])[2]'.</msg>
+<status status="PASS" endtime="20170406 21:24:02.636" starttime="20170406 21:24:01.617"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=(//input[@type='search'])[3]</arg>
+<arg>${patient_insurance}</arg>
+</arguments>
+<msg timestamp="20170406 21:24:02.637" level="INFO">Typing text '1199SEIU Home Care' into text field 'xpath=(//input[@type='search'])[3]'</msg>
+<status status="PASS" endtime="20170406 21:24:04.289" starttime="20170406 21:24:02.637"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20170406 21:24:09.292" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170406 21:24:09.293" starttime="20170406 21:24:04.289"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.select2-result-label.ui-select-choices-row-inner &gt; span</arg>
+</arguments>
+<msg timestamp="20170406 21:24:09.293" level="INFO">Clicking element 'css=div.select2-result-label.ui-select-choices-row-inner &gt; span'.</msg>
+<status status="PASS" endtime="20170406 21:24:10.326" starttime="20170406 21:24:09.293"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=button.button.button--medium</arg>
+</arguments>
+<msg timestamp="20170406 21:24:10.326" level="INFO">Clicking button 'css=button.button.button--medium'.</msg>
+<status status="PASS" endtime="20170406 21:24:14.310" starttime="20170406 21:24:10.326"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170406 21:24:16.312" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170406 21:24:16.312" starttime="20170406 21:24:14.310"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=(//input[@type='search'])[3]</arg>
+</arguments>
+<msg timestamp="20170406 21:24:16.313" level="INFO">Clicking element 'xpath=(//input[@type='search'])[3]'.</msg>
+<status status="PASS" endtime="20170406 21:24:22.169" starttime="20170406 21:24:16.312"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=(//input[@type='search'])[3]</arg>
+<arg>${doctor_network}</arg>
+</arguments>
+<msg timestamp="20170406 21:24:22.170" level="INFO">Typing text 'Network 1' into text field 'xpath=(//input[@type='search'])[3]'</msg>
+<status status="PASS" endtime="20170406 21:24:24.164" starttime="20170406 21:24:22.169"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20170406 21:24:27.165" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170406 21:24:27.166" starttime="20170406 21:24:24.164"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=div.select2-result-label.ui-select-choices-row-inner</arg>
+</arguments>
+<msg timestamp="20170406 21:24:27.166" level="INFO">Clicking element 'css=div.select2-result-label.ui-select-choices-row-inner'.</msg>
+<status status="PASS" endtime="20170406 21:24:28.172" starttime="20170406 21:24:27.166"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=/html/body/ui-view/div/ui-view[2]/form/div/div[2]/div/div[2]/div[1]/div/ul[2]/li[1]/div/div/textarea</arg>
+<arg>${doctor_biography}</arg>
+</arguments>
+<msg timestamp="20170406 21:24:28.172" level="INFO">Typing text 'Biography' into text field 'xpath=/html/body/ui-view/div/ui-view[2]/form/div/div[2]/div/div[2]/div[1]/div/ul[2]/li[1]/div/div/textarea'</msg>
+<status status="PASS" endtime="20170406 21:24:29.923" starttime="20170406 21:24:28.172"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=/html/body/ui-view/div/ui-view[2]/form/div/div[2]/div/div[2]/div[1]/div/ul[2]/li[2]/div/div/textarea</arg>
+<arg>${doctor_education}</arg>
+</arguments>
+<msg timestamp="20170406 21:24:29.924" level="INFO">Typing text 'Education' into text field 'xpath=/html/body/ui-view/div/ui-view[2]/form/div/div[2]/div/div[2]/div[1]/div/ul[2]/li[2]/div/div/textarea'</msg>
+<status status="PASS" endtime="20170406 21:24:32.530" starttime="20170406 21:24:29.923"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=div.tab-pane.active &gt; div.form-bottom_bar &gt; div.container &gt; button.button.button--medium</arg>
+</arguments>
+<msg timestamp="20170406 21:24:32.531" level="INFO">Clicking button 'css=div.tab-pane.active &gt; div.form-bottom_bar &gt; div.container &gt; button.button.button--medium'.</msg>
+<status status="PASS" endtime="20170406 21:24:34.783" starttime="20170406 21:24:32.531"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>EMAIL NOTIFICATIONS</arg>
+</arguments>
+<status status="PASS" endtime="20170406 21:24:35.275" starttime="20170406 21:24:34.784"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20170406 21:24:36.276" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170406 21:24:36.276" starttime="20170406 21:24:35.275"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=div.tab-pane.active &gt; div.form-bottom_bar &gt; div.container &gt; button.button.button--medium</arg>
+</arguments>
+<msg timestamp="20170406 21:24:36.277" level="INFO">Clicking button 'css=div.tab-pane.active &gt; div.form-bottom_bar &gt; div.container &gt; button.button.button--medium'.</msg>
+<status status="PASS" endtime="20170406 21:24:38.533" starttime="20170406 21:24:36.277"></status>
+</kw>
+<status status="PASS" endtime="20170406 21:24:38.534" starttime="20170406 21:23:50.188"></status>
+</kw>
+<kw name="End Web test">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170406 21:24:39.034" starttime="20170406 21:24:38.535"></status>
+</kw>
+<status status="PASS" endtime="20170406 21:24:39.034" starttime="20170406 21:24:38.534"></status>
+</kw>
+<doc>This test contains flow related to creating new practice and adding doctor flow during creating practice.</doc>
+<tags>
+<tag>Creating Practice and adding a doctor</tag>
+</tags>
+<status status="PASS" endtime="20170406 21:24:39.034" critical="yes" starttime="20170406 21:22:49.166"></status>
+</test>
+<doc>GetReferd critical flow test</doc>
+<status status="PASS" endtime="20170406 21:24:39.035" starttime="20170406 21:22:49.053"></status>
+</suite>
+<status status="PASS" endtime="20170406 21:24:39.039" starttime="20170406 21:22:49.017"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Creating Practice and adding a doctor</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="GetReferd" pass="1">GetReferd</stat>
+<stat fail="0" id="s1-s1" name="GetReferd" pass="1">GetReferd.GetReferd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
