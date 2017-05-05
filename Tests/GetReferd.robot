@@ -48,7 +48,7 @@ ${appointment_date}  2017-04-01
 
 Creating_Practice_and_adding_a_doctor
     [Documentation]  This test contains flow related to creating new practice and adding doctor flow during creating practice.
-    [Tags]  Creating Practice and add a doctor
+    [Tags]  Creating Practice and adding a doctor
     Begin Web test
     Filling sign-up account page
     Filling sign-up billing page
