@@ -12,14 +12,14 @@ ${mail_login_page}  https://accounts.google.com/ServiceLogin?continue=https%3A%2
 ${admin_panel_page}  http://gr-api-qa.arabel.la/admin
 ${begin_web_text}  Welcome.
 @{gmail_login}  automation@arabel.la
-${office_admin_mail}  automation+gro182@ydtech.co
-${account_admin_gra}  automation+gra182@ydtech.co
-${doctor_mail}  automation+grd182@ydtech.co
+${office_admin_mail}  automation+gro185@ydtech.co
+${account_admin_gra}  automation+gra185@ydtech.co
+${doctor_mail}  automation+grd185@ydtech.co
 ${doctor_biography}  Biography
 ${doctor_education}  Education
 ${doctor_network}  Network 1
-${patient_email}  automation+grp182@ydtech.co
-${practice_name}  AutoTest182
+${patient_email}  automation+grp185@ydtech.co
+${practice_name}  AutoTest185
 ${account_page_signup_button}  sign up
 ${medical_spec}  Psychiatry
 ${password}  poqwlkas0912
@@ -108,7 +108,7 @@ Log_in_into_email_and_set_3_dates_as_a_Patient
 *** Keywords ***
 
 Begin Web test
-    open browser  ${signup_page}  ${BROWSER}  remote_url=${remote_url}  desired_capabilities=${desired_capabilities}
+    open browser  ${signup_page}  ${BROWSER}  #remote_url=${remote_url}  desired_capabilities=${desired_capabilities}
     wait until page contains  ${begin_web_text}
 
 Filling sign-up account page
